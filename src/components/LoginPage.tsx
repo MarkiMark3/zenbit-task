@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { authService } from "../services/authService";
+import imgBg from "../../public/loginImg.jpg";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -22,7 +23,10 @@ const LoginPage = () => {
   };
   return (
     <div className="relative flex font-[Merriweather] ">
-      <div className="absolute top-0 left-0 h-screen w-full ${} bg-[url('./loginImg.jpg')] bg-cover bg-center lg:static lg:flex-2  " />
+      <div
+        className="absolute top-0 left-0 h-screen w-full ${}  bg-cover bg-center lg:static lg:flex-2  "
+        style={{ backgroundImage: `url(${imgBg})` }}
+      />
       <div className="flex  items-center justify-center w-full h-screen bg-transparent px-[100px] z-50 lg:bg-white lg:flex-1">
         <form
           onSubmit={handleSubmit}

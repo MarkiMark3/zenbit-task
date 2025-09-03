@@ -2,6 +2,13 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { authService } from "../services/authService";
 import type { Data } from "../services/types";
+import imgHomeBg from "../../public/backgroundHome.jpg";
+import img1 from "../../public/dataImg1.jpg";
+import img2 from "../../public/dataImg2.jpg";
+import img3 from "../../public/dataImg3.jpg";
+import img4 from "../../public/dataImg4.jpg";
+
+const imgs = [img1, img2, img3, img4];
 
 const HomePage = () => {
   const [data, setData] = useState<Data[] | null>(null);
@@ -20,7 +27,10 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="relative h-screen w-full bg-[url('../../public/backgroundHome.jpg')] bg-cover ">
+      <div
+        className="relative h-screen w-full  bg-cover "
+        style={{ backgroundImage: `url(${imgHomeBg})` }}
+      >
         <div className="absolute h-full w-full top-0 left-0 bg-[#172234]/60 z-20" />
         <div className="flex flex-col items-center justify-center h-full p-10 gap-8 ">
           <p className="font-[Merriweather] font-bold text-white text-6xl md:text-7xl z-50 text-center ">
@@ -49,7 +59,7 @@ const HomePage = () => {
             <div
               key={index}
               className={`h-[300px] md:h-[400px] bg-center bg-cover`}
-              style={{ backgroundImage: `url('./dataImg${index + 1}.jpg')` }}
+              style={{ backgroundImage: `url(${imgs[index]})` }}
             >
               <div className="h-full flex flex-col justify-end  text-white font-bold text-[18px] ml-[14px] pb-[20px]">
                 <h2 className="text-[20px]">{item.title}</h2>
