@@ -2,7 +2,7 @@ import axios from "axios";
 
 export function createClient() {
   return axios.create({
-    baseURL: "http://localhost:3002",
+    baseURL: "https://zenbit-task-back-vnk4.onrender.com",
     withCredentials: true,
   });
 }
