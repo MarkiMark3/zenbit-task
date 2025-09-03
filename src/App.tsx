@@ -17,9 +17,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/sign-up" element={<SignUpPage />} />
-          <Route path="/recover-password" element={<RecoverPage />} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="sign-up" element={<SignUpPage />} />
+          <Route path="recover-password" element={<RecoverPage />} />
           <Route path="resetPassword/:email" element={<ResetPasswordPage />} />
           <Route path="check-email" element={<CheckEmailPage />} />
           <Route
