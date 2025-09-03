@@ -20,7 +20,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="relative h-screen w-full bg-[url('./backgroundHome.jpg')] bg-cover ">
+      <div className="relative h-screen w-full bg-[url('../../public/backgroundHome.jpg')] bg-cover ">
         <div className="absolute h-full w-full top-0 left-0 bg-[#172234]/60 z-20" />
         <div className="flex flex-col items-center justify-center h-full p-10 gap-8 ">
           <p className="font-[Merriweather] font-bold text-white text-6xl md:text-7xl z-50 text-center ">
